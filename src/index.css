@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #9333ea, #ec4899);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #7e22ce, #db2777);
+}
+
+/* Animation keyframes */
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes floatingBubbles {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-10px) translateX(5px) rotate(5deg);
+  }
+  66% {
+    transform: translateY(5px) translateX(-5px) rotate(-5deg);
+  }
+  100% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+}
+
+@keyframes pulse-fast {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+@keyframes snake {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.2); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Custom animation classes */
+.animate-slide-left {
+  animation: slideLeft 0.4s ease forwards;
+}
+
+.animate-slide-right {
+  animation: slideRight 0.4s ease forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.5s ease forwards;
+}
+
+.animate-gradient {
+  background: linear-gradient(-45deg, #ff3366, #9333ea, #2dd4bf, #f97316);
+  background-size: 400% 400%;
+  animation: gradientFlow 15s ease infinite;
+}
+
+.animate-floating {
+  animation: floatingBubbles 6s ease-in-out infinite;
+}
+
+.animate-pulse-fast {
+  animation: pulse-fast 1s ease-in-out infinite;
+}
+
+.animate-snake {
+  animation: snake 2s ease-in-out infinite;
+}
+
+/* Add smooth transitions */
+* {
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+body {
+  @apply bg-gray-50 text-gray-900 font-sans antialiased;
+  cursor: none;
+}
+
+/* Hide the default cursor on interactive elements */
+button, a, [role="button"] {
+  cursor: none;
+}
+
+/* Style for tag elements */
+.tag-pill {
+  @apply inline-flex items-center px-2 py-1 text-xs font-medium rounded-full;
+  @apply transition-all duration-300 ease-in-out;
+  @apply hover:scale-110;
+}
+
+/* Background bubble effect */
+.bubble {
+  @apply absolute rounded-full opacity-10 pointer-events-none animate-floating;
+  background: linear-gradient(45deg, #9333ea, #ec4899);
+}
