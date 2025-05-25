@@ -40,6 +40,6 @@ An engaging and fully responsive photo gallery built for **CollegeTips**, design
 1. Clone the repository:
    ```bash
    git clone https://github.com/Manik1811/SIP-25-EW-10---CollegeTips.in_Task-4_galary-remake.git
-   cd respected folder
+   cd SIP-25-EW-10---CollegeTips.in_Task-4_galary-remake
 
 
