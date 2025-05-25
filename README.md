@@ -42,4 +42,6 @@ An engaging and fully responsive photo gallery built for **CollegeTips**, design
    git clone https://github.com/Manik1811/SIP-25-EW-10---CollegeTips.in_Task-4_galary-remake.git
    cd SIP-25-EW-10---CollegeTips.in_Task-4_galary-remake
 
+## Deploy link
+https://poushali-task-4-collegetips-galary.netlify.app/
 
